@@ -2878,3 +2878,79 @@ body.dark .about-content p{
     color:#D7DDD8;
 
 }
+/* ==========================================================
+                    BACK TO TOP BUTTON
+========================================================== */
+
+.back-to-top{
+
+    position: fixed;
+
+    left: 50%;
+    bottom: 40px;
+
+    transform: translateX(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-50%);
+    transition: transform .3s ease,
+                opacity .3s ease;
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%, 0);
+
+}
+
+.back-to-top:hover{
+
+     transform: translateX(-50%) translateY(-12px);
+
+    background:linear-gradient(
+        135deg,
+        var(--dark),
+        var(--primary)
+    );
+
+}
+body.dark .back-to-top{
+
+    background:#232826;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+}
+
+body.dark .back-to-top:hover{
+
+    background:#2D6F4A;
+
+}

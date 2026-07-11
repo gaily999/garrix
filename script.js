@@ -928,3 +928,57 @@ if (themeToggle) {
     });
 
 }
+
+// ==========================================================
+//                  BACK TO TOP BUTTON
+// ==========================================================
+
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+
+    // Show button after scrolling
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    });
+
+    // Scroll to top when clicked
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+const footer = document.querySelector("footer");
+
+if (backToTop && footer) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+        const footerTop = footer.getBoundingClientRect().top;
+
+        if (footerTop < window.innerHeight) {
+            backToTop.classList.add("hide");
+        } else {
+            backToTop.classList.remove("hide");
+        }
+
+    });
+
+}

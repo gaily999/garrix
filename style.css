@@ -1,0 +1,3392 @@
+/* ==========================================================
+                        GOOGLE FONTS
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap');
+
+/* ==========================================================
+                        ROOT VARIABLES
+========================================================== */
+
+:root{
+    --dark:#344C3D;
+    --primary:#738A6E;
+    --secondary:#8EA58C;
+    --light:#BFCFBB;
+    --cream:#E8F0E3;
+    --white:#FFFFFF;
+    --nav-text:#D6E2D1;
+    --glass:
+    rgba(255,255,255,.18);
+    --glass-border:
+    rgba(255,255,255,.25);
+    --shadow:
+    0 10px 30px rgba(52,76,61,.15);
+    --radius:
+    20px;
+    --transition:
+    .35s ease;
+}
+
+/* ==========================================================
+                            RESET
+========================================================== */
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    'Manrope',
+    sans-serif;
+    color:
+    var(--dark);
+    overflow-x:hidden;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(142,165,140,.35),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(115,138,110,.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #E3ECE0,
+            #BFCFBB
+        );
+}
+
+/* ==========================================================
+                    GLOBAL ELEMENTS
+========================================================== */
+img{
+    display:block;
+    max-width:100%;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:
+    var(--transition);
+}
+
+button,
+input{
+
+    font-family:
+    'Manrope',
+    sans-serif;
+
+}
+
+
+
+
+
+/* ==========================================================
+                        SCROLLBAR
+========================================================== */
+
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:
+    #BFCFBB;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #738A6E,
+
+        #344C3D
+
+    );
+
+
+    border-radius:20px;
+
+
+    border:
+
+    3px solid #BFCFBB;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+    #344C3D;
+
+}
+
+/* ==========================================================
+                    GLASS NAVBAR CONTAINER
+========================================================== */
+
+
+header{
+
+
+    position:fixed;
+
+
+    top:18px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+
+    width:95%;
+
+
+    max-width:1350px;
+
+
+
+    z-index:1000;
+
+
+
+
+
+    border-radius:22px;
+
+
+
+
+
+    background:
+
+        linear-gradient(
+
+            110deg,
+
+
+            rgba(52,76,61,.88),
+
+
+            rgba(115,138,110,.60),
+
+
+            rgba(142,165,140,.35)
+
+        );
+
+
+
+
+
+    backdrop-filter:blur(18px);
+
+
+    -webkit-backdrop-filter:blur(18px);
+
+
+
+
+
+    border:
+
+
+    1px solid var(--glass-border);
+
+
+
+
+
+    box-shadow:
+
+
+
+        var(--shadow),
+
+
+
+        inset 0 1px 2px rgba(255,255,255,.18);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                            NAVBAR
+========================================================== */
+
+
+.navbar{
+
+
+    max-width:1300px;
+
+
+
+    margin:auto;
+
+
+
+
+
+    padding:
+
+    16px 35px;
+
+
+
+
+
+    display:flex;
+
+
+
+
+
+    justify-content:space-between;
+
+
+
+
+
+    align-items:center;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                            LOGO
+========================================================== */
+
+
+.logo{
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    gap:15px;
+
+
+
+}
+
+
+
+
+
+.logo img{
+
+
+    width:55px;
+
+
+
+    height:55px;
+
+
+
+    object-fit:contain;
+
+
+
+}
+
+
+
+
+
+.logo h1{
+
+
+    font-family:
+
+    'Orbitron',
+    sans-serif;
+    color:
+    var(--cream);
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+/* ==========================================================
+                        NAV LINKS
+========================================================== */
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    list-style:none;
+
+}
+
+
+
+.nav-links a{
+
+    color:#344C3D;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    background:rgba(232,240,227,.45);
+
+    color:#344C3D;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        inset 0 1px 2px rgba(255,255,255,.25);
+
+}
+
+.nav-links a.active{
+
+    background:rgba(232,240,227,.55);
+
+    color:#344C3D;
+
+    box-shadow:
+
+        inset 0 1px 2px rgba(255,255,255,.25),
+
+        0 5px 16px rgba(52,76,61,.15);
+
+}
+/* ==========================================================
+                            HOVER
+========================================================== */
+
+
+.nav-links a:hover{
+
+
+
+    background:
+
+
+    rgba(191,207,187,.22);
+
+
+
+
+
+    color:
+
+    #FFFFFF;
+
+
+
+
+
+    transform:
+
+    translateY(-2px);
+
+
+
+
+
+    box-shadow:
+
+
+
+        inset 0 1px 2px rgba(255,255,255,.18);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        ACTIVE PAGE
+========================================================== */
+
+
+.nav-links a.active{
+
+
+
+    background:
+
+
+    rgba(191,207,187,.30);
+
+
+
+
+
+    color:
+
+
+    #FFFFFF;
+
+
+
+
+
+    box-shadow:
+
+
+
+        inset 0 1px 2px rgba(255,255,255,.22),
+
+
+
+        0 5px 16px rgba(0,0,0,.12);
+
+
+
+}
+/* ==========================================================
+                        HERO SECTION
+========================================================== */
+
+
+.hero{
+
+
+    min-height:100vh;
+
+
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+
+
+    text-align:center;
+
+
+
+
+
+    padding:
+
+    170px 60px 90px;
+
+
+
+
+
+    background:
+
+        linear-gradient(
+
+
+            rgba(52,76,61,.72),
+
+
+            rgba(115,138,110,.55)
+
+
+        ),
+
+
+
+
+
+        url("img/banner.png");
+
+
+
+
+
+    background-size:cover;
+
+
+
+    background-position:center;
+
+
+
+    background-repeat:no-repeat;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        HERO CONTENT
+========================================================== */
+
+
+.hero-content{
+
+
+    max-width:900px;
+
+
+
+}
+
+
+
+
+
+
+
+.hero h1{
+
+
+    font-size:64px;
+
+
+
+
+
+    color:
+
+    var(--cream);
+
+
+
+
+
+    font-weight:800;
+
+
+
+
+
+    margin-bottom:18px;
+
+
+
+}
+
+
+
+
+
+
+
+.tagline{
+
+
+    color:
+
+    #E8F0E3;
+
+
+
+
+
+    font-size:22px;
+
+
+
+
+
+    font-weight:600;
+
+
+
+
+
+    margin-bottom:25px;
+
+
+
+}
+
+
+
+
+
+
+
+.hero p{
+
+
+    color:
+
+    #F4F8F1;
+
+
+
+
+
+    font-size:19px;
+
+
+
+
+
+    line-height:1.9;
+
+
+
+
+
+    max-width:760px;
+
+
+
+
+
+    margin:auto;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                            BUTTONS
+========================================================== */
+
+
+.btn{
+
+
+    display:inline-flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+
+
+    padding:
+
+    14px 34px;
+
+
+
+
+
+    margin-top:30px;
+
+
+
+
+
+    border:none;
+
+
+
+
+
+    border-radius:50px;
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--primary),
+
+
+            var(--secondary)
+
+
+        );
+
+
+
+
+
+    color:
+
+    white;
+
+
+
+
+
+    font-size:16px;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    cursor:pointer;
+
+
+
+
+
+    transition:
+
+    var(--transition);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 10px 25px rgba(52,76,61,.18);
+
+
+
+}
+
+
+
+
+
+
+
+.btn:hover{
+
+
+
+    transform:
+
+    translateY(-4px);
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--dark),
+
+
+            var(--primary)
+
+
+        );
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 18px 35px rgba(52,76,61,.25);
+
+
+
+}
+
+
+
+
+
+
+
+.btn:active{
+
+
+
+    transform:
+
+    scale(.98);
+
+
+
+}
+
+/* ==========================================================
+                        PAGE LAYOUT
+========================================================== */
+
+
+.page{
+
+
+    max-width:1200px;
+
+
+
+    margin:auto;
+
+
+
+
+
+    padding:
+
+    150px 30px 80px;
+
+
+
+}
+
+
+
+
+
+
+
+.page h2{
+
+
+    text-align:center;
+
+
+
+
+
+    font-size:46px;
+
+
+
+
+
+    font-weight:800;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    margin-bottom:18px;
+
+
+
+}
+
+
+
+
+
+
+
+.page p{
+
+
+    font-size:17px;
+
+
+
+
+
+    line-height:1.9;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        FEATURES SECTION
+========================================================== */
+
+
+.features{
+
+
+    max-width:1300px;
+
+
+
+    margin:auto;
+
+
+
+
+
+    padding:
+
+    80px 30px;
+
+
+
+}
+
+
+
+
+
+
+
+.features h2{
+
+
+    text-align:center;
+
+
+
+
+
+    font-size:46px;
+
+
+
+
+
+    font-weight:800;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    margin-bottom:55px;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        CARD GRID
+========================================================== */
+
+
+.cards{
+
+
+    display:grid;
+
+
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+
+
+    gap:30px;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        GLASS CARD
+========================================================== */
+
+
+.card{
+
+
+    background:
+
+
+
+    rgba(255,255,255,.28);
+
+
+
+
+
+    backdrop-filter:blur(16px);
+
+
+
+    -webkit-backdrop-filter:blur(16px);
+
+
+
+
+
+    border:
+
+
+
+    1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    border-radius:22px;
+
+
+
+
+
+    padding:
+
+    30px;
+
+
+
+
+
+    box-shadow:
+
+
+
+    0 12px 30px rgba(52,76,61,.12);
+
+
+
+
+
+    transition:
+
+    var(--transition);
+
+
+
+}
+
+
+
+
+
+
+
+.card:hover{
+
+
+    transform:
+
+
+
+    translateY(-8px);
+
+
+
+
+
+    box-shadow:
+
+
+
+    0 22px 45px rgba(52,76,61,.20);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    CARD CONTENT
+========================================================== */
+
+
+.card h3{
+
+
+    font-size:26px;
+
+
+
+
+
+    font-weight:800;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+
+
+.card p{
+
+
+    color:
+
+    #405744;
+
+
+
+
+
+    line-height:1.8;
+
+
+
+
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    RESPONSIVE CARDS
+========================================================== */
+
+
+@media(max-width:1000px){
+
+
+    .cards{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+    .cards{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+
+    }
+
+
+}
+
+/* ==========================================================
+                        FORMULA BOX
+========================================================== */
+
+
+.formula{
+
+
+    display:inline-flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+
+
+    padding:
+
+    10px 18px;
+
+
+
+
+
+    margin-bottom:20px;
+
+
+
+
+
+    border-radius:12px;
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--primary),
+
+
+            var(--secondary)
+
+
+        );
+
+
+
+
+
+    color:white;
+
+
+
+
+
+    font-size:15px;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 8px 18px rgba(52,76,61,.18);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        INPUT FIELDS
+========================================================== */
+
+
+input{
+
+
+    width:100%;
+
+
+
+
+
+    margin:
+
+    12px 0;
+
+
+
+
+
+    padding:
+
+    15px 18px;
+
+
+
+
+
+    border:none;
+
+
+
+    outline:none;
+
+
+
+
+
+    border-radius:14px;
+
+
+
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    font-size:16px;
+
+
+
+
+
+    font-weight:600;
+
+
+
+
+
+    transition:
+
+    var(--transition);
+
+
+
+
+
+    box-shadow:
+
+
+
+        inset 0 2px 8px rgba(52,76,61,.08);
+
+
+
+}
+
+
+
+
+
+
+
+input::placeholder{
+
+
+    color:
+
+    #738A6E;
+
+
+
+
+
+    font-weight:500;
+
+
+
+}
+
+
+
+
+
+
+
+input:focus{
+
+
+    background:white;
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 0 0 3px rgba(115,138,110,.25),
+
+
+
+        inset 0 2px 8px rgba(52,76,61,.08);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        CALCULATOR BOX
+========================================================== */
+
+
+.calculator{
+
+
+    max-width:460px;
+
+
+
+
+
+    margin:
+
+    40px auto;
+
+
+
+
+
+    padding:
+
+    30px;
+
+
+
+
+
+    border-radius:24px;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.25);
+
+
+
+
+
+    backdrop-filter:blur(18px);
+
+
+
+    -webkit-backdrop-filter:blur(18px);
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 18px 40px rgba(52,76,61,.15);
+
+
+
+}
+
+
+
+
+
+
+
+/* Calculator Display */
+
+.calculator input{
+
+
+    font-size:30px;
+
+
+
+
+
+    text-align:right;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    margin-bottom:20px;
+
+
+
+
+
+    cursor:default;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    CALCULATOR GRID
+========================================================== */
+
+
+.calculator-buttons{
+
+
+    display:grid;
+
+
+
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+
+
+
+    gap:12px;
+
+
+
+}
+
+
+
+
+
+
+
+.calculator-buttons button{
+
+
+    margin:0;
+
+
+
+
+
+    padding:
+
+    18px 10px;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    GENERAL BUTTONS
+========================================================== */
+
+
+button{
+
+
+    width:100%;
+
+
+
+
+
+    padding:
+
+    15px;
+
+
+
+
+
+    margin-top:12px;
+
+
+
+
+
+    border:none;
+
+
+
+
+
+    border-radius:14px;
+
+
+
+
+
+    cursor:pointer;
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--primary),
+
+
+            var(--secondary)
+
+
+        );
+
+
+
+
+
+    color:white;
+
+
+
+
+
+    font-size:16px;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    transition:
+
+    var(--transition);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 8px 18px rgba(52,76,61,.18);
+
+
+
+}
+
+
+
+
+
+
+
+button:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--dark),
+
+
+            var(--primary)
+
+
+        );
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 16px 30px rgba(52,76,61,.22);
+
+
+
+}
+
+
+
+
+
+
+
+button:active{
+
+
+    transform:
+
+    scale(.98);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        RESULT BOX
+========================================================== */
+
+
+.result{
+
+
+    margin-top:20px;
+
+
+
+
+
+    min-height:65px;
+
+
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+
+
+    text-align:center;
+
+
+
+
+
+    border-radius:16px;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.35);
+
+
+
+
+
+    backdrop-filter:blur(10px);
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    font-size:20px;
+
+
+
+
+
+    font-weight:800;
+
+
+
+
+
+    padding:18px;
+
+
+
+
+
+    user-select:none;
+
+
+
+}
+/* ==========================================================
+                    SHAPE SELECTOR BUTTONS
+========================================================== */
+
+
+.shape-buttons{
+
+
+    display:grid;
+
+
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+
+
+    gap:20px;
+
+
+
+
+
+    max-width:900px;
+
+
+
+
+
+    margin:
+
+    50px auto;
+
+
+
+}
+
+
+
+
+
+
+
+.shape-buttons button{
+
+
+    padding:
+
+    22px;
+
+
+
+
+
+    margin:0;
+
+
+
+
+
+    border-radius:18px;
+
+
+
+
+
+    font-size:18px;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.28);
+
+
+
+
+
+    backdrop-filter:blur(15px);
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 12px 25px rgba(52,76,61,.10);
+
+
+
+}
+
+
+
+
+
+
+
+.shape-buttons button:hover{
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--primary),
+
+
+            var(--secondary)
+
+
+        );
+
+
+
+
+
+    color:white;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    SHAPE CALCULATOR CARD
+========================================================== */
+
+
+.shape-box{
+
+
+    display:none;
+
+
+
+
+
+    max-width:650px;
+
+
+
+
+
+    margin:
+
+    40px auto;
+
+
+
+
+
+    padding:
+
+    35px;
+
+
+
+
+
+    border-radius:24px;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.28);
+
+
+
+
+
+    backdrop-filter:blur(18px);
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 18px 40px rgba(52,76,61,.15);
+
+
+
+}
+
+
+
+
+
+
+
+.shape-box h3{
+
+
+    text-align:center;
+
+
+
+
+
+    font-size:28px;
+
+
+
+
+
+    margin-bottom:25px;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                        ABOUT PAGE
+========================================================== */
+
+
+.about-card{
+
+
+    max-width:450px;
+
+
+
+
+
+    margin:
+
+    40px auto;
+
+
+
+
+
+    padding:
+
+    35px;
+
+
+
+
+
+    text-align:center;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.28);
+
+
+
+
+
+    backdrop-filter:blur(16px);
+
+
+
+
+
+    border-radius:24px;
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 18px 40px rgba(52,76,61,.15);
+
+
+
+}
+
+
+
+
+
+
+
+.profile{
+
+
+    width:180px;
+
+
+
+    height:180px;
+
+
+
+
+
+    object-fit:cover;
+
+
+
+
+
+    border-radius:50%;
+
+
+
+
+
+    margin:
+
+    0 auto 25px;
+
+
+
+
+
+    border:
+
+
+
+    5px solid var(--secondary);
+
+
+
+}
+
+
+
+
+
+
+
+.about-card h3{
+
+
+    font-size:30px;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+
+
+    margin-bottom:15px;
+
+
+
+}
+
+
+
+
+
+
+
+.about-card p{
+
+
+    margin-bottom:10px;
+
+
+
+}
+
+
+
+/* ==========================================================
+                    SOCIAL ACCOUNTS CARD
+========================================================== */
+
+
+/* ==========================================================
+                    SOCIAL ACCOUNTS LEFT SIDE
+========================================================== */
+
+
+.social-card{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:25px;
+
+    background:
+
+        rgba(255,255,255,.28);
+
+
+    backdrop-filter:blur(16px);
+
+
+    border-radius:22px;
+
+
+    border:
+
+        1px solid rgba(255,255,255,.35);
+
+
+    box-shadow:
+
+        0 18px 40px rgba(52,76,61,.15);
+
+}
+
+
+
+.social-card h3{
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.social-links{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+.social-links a{
+
+
+    width:100%;
+
+
+    padding:14px;
+
+
+    border-radius:14px;
+
+
+    text-align:center;
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+    font-size:14px;
+
+
+    transition:.35s ease;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.social-links a:hover{
+
+
+    transform:translateY(-3px);
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            var(--dark),
+
+            var(--primary)
+
+        );
+
+
+}
+
+.social-links{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+    gap:20px;
+
+
+}
+
+
+
+.social-links a{
+
+
+    padding:18px;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+
+
+    color:white;
+
+
+
+    font-weight:700;
+
+
+
+    transition:.35s ease;
+
+
+
+}
+
+
+
+.social-links a:hover{
+
+
+    transform:
+
+    translateY(-5px);
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            var(--dark),
+
+            var(--primary)
+
+        );
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .social-links{
+
+       .socials-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+  padding: 20px; 
+}
+
+    }
+
+
+}
+
+
+
+/* ==========================================================
+                    SKILL BADGES
+========================================================== */
+
+
+.skills{
+
+
+    max-width:900px;
+
+
+
+
+
+    margin:
+
+    50px auto;
+
+
+
+
+
+    padding:
+
+    35px;
+
+
+
+
+
+    text-align:center;
+
+
+
+
+
+    background:
+
+
+
+        rgba(255,255,255,.28);
+
+
+
+
+
+    backdrop-filter:blur(16px);
+
+
+
+
+
+    border-radius:24px;
+
+
+
+
+
+    border:
+
+
+
+        1px solid rgba(255,255,255,.35);
+
+
+
+}
+
+
+
+
+
+
+
+.skills h3{
+
+
+    font-size:30px;
+
+
+
+
+
+    margin-bottom:25px;
+
+
+
+
+
+    color:
+
+    var(--dark);
+
+
+
+}
+
+
+
+
+
+
+
+.badge-container{
+
+
+    display:flex;
+
+
+
+
+
+    justify-content:center;
+
+
+
+
+
+    flex-wrap:wrap;
+
+
+
+
+
+    gap:15px;
+
+
+
+}
+
+
+
+
+
+
+
+.badge{
+
+
+    padding:
+
+
+
+    10px 20px;
+
+
+
+
+
+    border-radius:50px;
+
+
+
+
+
+    background:
+
+
+
+        linear-gradient(
+
+
+            135deg,
+
+
+            var(--primary),
+
+
+            var(--secondary)
+
+
+        );
+
+
+
+
+
+    color:white;
+
+
+
+
+
+    font-weight:700;
+
+
+
+
+
+    font-size:14px;
+
+
+
+
+
+    box-shadow:
+
+
+
+        0 8px 18px rgba(52,76,61,.15);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                            FOOTER
+========================================================== */
+
+
+footer{
+
+
+    width:100%;
+
+
+
+
+
+    padding:
+
+    30px 20px;
+
+
+
+
+
+    margin-top:50px;
+
+
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+
+
+    text-align:center;
+
+
+
+
+
+    background:
+
+
+
+        rgba(52,76,61,.90);
+
+
+
+
+
+    color:
+
+    var(--cream);
+
+
+
+
+
+    backdrop-filter:blur(10px);
+
+
+
+}
+
+
+
+
+
+
+
+footer p{
+
+
+    margin:0;
+
+
+
+
+
+    font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+                    RESPONSIVE SHAPES
+========================================================== */
+
+
+@media(max-width:900px){
+
+
+    .shape-buttons{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    /* Your CSS selectors and rules go inside here */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================================
+                    ABOUT PORTFOLIO LAYOUT
+========================================================== */
+
+
+.about-layout{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    350px 1fr;
+
+
+    gap:50px;
+
+
+    align-items:start;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+/* LEFT PROFILE */
+
+
+.profile-section{
+
+
+    text-align:center;
+
+
+    position:sticky;
+
+
+    top:120px;
+
+
+}
+
+
+
+
+
+.floating-profile{
+
+
+    width:230px;
+
+
+    height:230px;
+
+
+    margin:auto;
+
+
+    border-radius:50%;
+
+
+    padding:10px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+
+    animation:float 4s ease-in-out infinite;
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(52,76,61,.25);
+
+
+}
+
+
+
+
+.profile{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+@keyframes float{
+
+
+    0%,100%{
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+    50%{
+
+
+        transform:translateY(-15px);
+
+
+    }
+
+
+}
+
+
+
+
+
+.profile-section h3{
+
+
+    margin-top:25px;
+
+
+    font-size:32px;
+
+
+    color:var(--dark);
+
+
+}
+
+
+
+
+
+
+/* BADGES */
+
+
+.badge-container{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:12px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+.badge{
+
+
+    padding:10px 18px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/* RIGHT CONTENT */
+
+
+.about-content{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.about-content .card{
+
+
+    margin:0;
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+    .about-layout{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+    .profile-section{
+
+
+        position:relative;
+
+
+        top:0;
+
+
+    }
+
+
+}

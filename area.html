@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Garrix | Area</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+
+<header>
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+<img src="img/icon.png" alt="Garrix Logo">
+
+<h1>Garrix</h1>
+
+</div>
+
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="calculator.html">Calculator</a></li>
+<li><a href="diameter.html">Diameter</a></li>
+<li><a href="area.html" class="active">Area</a></li>
+<li><a href="volume.html">Volume</a></li>
+<li><a href="perimeter.html">Perimeter</a></li>
+<li><a href="about.html">About</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= AREA PAGE ================= -->
+
+
+<section class="page">
+
+
+<h2>Area Calculator</h2>
+
+
+<p style="text-align:center; margin-bottom:40px;">
+
+Select a shape to calculate its area.
+
+</p>
+
+
+
+<div class="shape-buttons">
+
+
+<button onclick="showShape('rectangle')">
+▭ Rectangle
+</button>
+
+
+<button onclick="showShape('square')">
+□ Square
+</button>
+
+
+<button onclick="showShape('triangle')">
+△ Triangle
+</button>
+
+
+<button onclick="showShape('circle')">
+○ Circle
+</button>
+
+
+<button onclick="showShape('parallelogram')">
+▱ Parallelogram
+</button>
+
+
+<button onclick="showShape('trapezoid')">
+⏢ Trapezoid
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- ================= RECTANGLE ================= -->
+
+
+<div class="shape-box" id="rectangle">
+
+
+<h3>Rectangle</h3>
+
+
+<div class="formula">
+
+Formula: A = L × W
+
+</div>
+
+
+
+<input 
+type="number"
+id="rectLength"
+placeholder="Length"
+>
+
+
+<input 
+type="number"
+id="rectWidth"
+placeholder="Width"
+>
+
+
+<button onclick="rectangleArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="rectangleResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= SQUARE ================= -->
+
+
+<div class="shape-box" id="square">
+
+
+<h3>Square</h3>
+
+
+<div class="formula">
+
+Formula: A = s²
+
+</div>
+
+
+
+<input
+type="number"
+id="squareSide"
+placeholder="Side Length"
+>
+
+
+<button onclick="squareArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="squareResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= TRIANGLE ================= -->
+
+
+<div class="shape-box" id="triangle">
+
+
+<h3>Triangle</h3>
+
+
+<div class="formula">
+
+Formula: A = ½ × b × h
+
+</div>
+
+
+
+<input
+type="number"
+id="triangleBase"
+placeholder="Base"
+>
+
+
+<input
+type="number"
+id="triangleHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="triangleArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="triangleResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= CIRCLE ================= -->
+
+
+<div class="shape-box" id="circle">
+
+
+<h3>Circle</h3>
+
+
+<div class="formula">
+
+Formula: A = πr²
+
+</div>
+
+
+
+<input
+type="number"
+id="circleRadius"
+placeholder="Radius"
+>
+
+
+
+<button onclick="circleArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="circleResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PARALLELOGRAM ================= -->
+
+
+<div class="shape-box" id="parallelogram">
+
+
+<h3>Parallelogram</h3>
+
+
+<div class="formula">
+
+Formula: A = b × h
+
+</div>
+
+
+
+<input
+type="number"
+id="paraBase"
+placeholder="Base"
+>
+
+
+<input
+type="number"
+id="paraHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="parallelogramArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="parallelogramResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= TRAPEZOID ================= -->
+
+
+<div class="shape-box" id="trapezoid">
+
+
+<h3>Trapezoid</h3>
+
+
+<div class="formula">
+
+Formula: A = ½(a + b)h
+
+</div>
+
+
+
+<input
+type="number"
+id="trapBase1"
+placeholder="Base 1"
+>
+
+
+<input
+type="number"
+id="trapBase2"
+placeholder="Base 2"
+>
+
+
+<input
+type="number"
+id="trapHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="trapezoidArea()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="trapezoidResult">
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+<p>
+
+© 2026 Garrix | Interactive Mathematics Website
+
+</p>
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

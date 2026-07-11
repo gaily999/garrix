@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Garrix | Diameter</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="img/icon.png" alt="Garrix Logo">
+
+            <h1>Garrix</h1>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="calculator.html">Calculator</a></li>
+
+            <li><a href="diameter.html" class="active">Diameter</a></li>
+
+            <li><a href="area.html">Area</a></li>
+
+            <li><a href="volume.html">Volume</a></li>
+
+            <li><a href="perimeter.html">Perimeter</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="page">
+
+    <h2>Circle Calculator</h2>
+
+    <p style="text-align:center; margin-bottom:40px;">
+
+        Select what you want to calculate.
+
+    </p>
+
+    <div class="shape-buttons">
+
+        <button onclick="showDiameter('diameter')">
+
+            ○ Diameter
+
+        </button>
+
+        <button onclick="showDiameter('radius')">
+
+            ○ Radius
+
+        </button>
+
+        <button onclick="showDiameter('circumference')">
+
+            ○ Circumference
+
+        </button>
+
+    </div>
+
+    <!-- ================= DIAMETER ================= -->
+
+    <div class="shape-box" id="diameter">
+
+        <h3>Diameter from Radius</h3>
+
+        <div class="formula">
+
+            Formula: d = 2r
+
+        </div>
+
+        <input
+            type="number"
+            id="radiusInput"
+            placeholder="Enter Radius"
+        >
+
+        <button onclick="calculateDiameter()">
+
+            Calculate
+
+        </button>
+
+        <div class="result" id="diameterResult"></div>
+
+    </div>
+
+    <!-- ================= RADIUS ================= -->
+
+    <div class="shape-box" id="radius">
+
+        <h3>Radius from Diameter</h3>
+
+        <div class="formula">
+
+            Formula: r = d ÷ 2
+
+        </div>
+
+        <input
+            type="number"
+            id="diameterInput"
+            placeholder="Enter Diameter"
+        >
+
+        <button onclick="calculateRadius()">
+
+            Calculate
+
+        </button>
+
+        <div class="result" id="radiusResult"></div>
+
+    </div>
+
+    <!-- ================= CIRCUMFERENCE ================= -->
+
+    <div class="shape-box" id="circumference">
+
+        <h3>Circumference from Radius</h3>
+
+        <div class="formula">
+
+            Formula: C = 2πr
+
+        </div>
+
+        <input
+            type="number"
+            id="circRadius"
+            placeholder="Enter Radius"
+        >
+
+        <button onclick="calculateCircumference()">
+
+            Calculate
+
+        </button>
+
+        <div class="result" id="circumferenceResult"></div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © 2026 Garrix | Interactive Mathematics Website
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

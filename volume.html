@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Garrix | Volume</title>
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+
+<header>
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+<img src="img/icon.png" alt="Garrix Logo">
+
+<h1>Garrix</h1>
+
+</div>
+
+
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="calculator.html">Calculator</a></li>
+<li><a href="diameter.html">Diameter</a></li>
+<li><a href="area.html">Area</a></li>
+<li><a href="volume.html" class="active">Volume</a></li>
+<li><a href="perimeter.html">Perimeter</a></li>
+<li><a href="about.html">About</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+
+<!-- ================= PAGE ================= -->
+
+
+<section class="page">
+
+
+<h2>Volume Calculator</h2>
+
+
+<p style="text-align:center; margin-bottom:40px;">
+
+Select a solid to calculate its volume.
+
+</p>
+
+
+
+
+
+<div class="shape-buttons">
+
+
+<button onclick="showShape('cube')">
+
+◼ Cube
+
+</button>
+
+
+<button onclick="showShape('rectPrism')">
+
+▯ Rectangular Prism
+
+</button>
+
+
+<button onclick="showShape('cylinder')">
+
+⬭ Cylinder
+
+</button>
+
+
+<button onclick="showShape('cone')">
+
+◭ Cone
+
+</button>
+
+
+<button onclick="showShape('sphere')">
+
+◯ Sphere
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= CUBE ================= -->
+
+
+<div class="shape-box" id="cube">
+
+
+<h3>Cube</h3>
+
+
+<div class="formula">
+
+Formula: V = s³
+
+</div>
+
+
+
+<input
+type="number"
+id="cubeSide"
+placeholder="Side Length"
+>
+
+
+
+<button onclick="cubeVolume()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="cubeResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= RECTANGULAR PRISM ================= -->
+
+
+<div class="shape-box" id="rectPrism">
+
+
+<h3>Rectangular Prism</h3>
+
+
+<div class="formula">
+
+Formula: V = L × W × H
+
+</div>
+
+
+
+<input
+type="number"
+id="prismLength"
+placeholder="Length"
+>
+
+
+<input
+type="number"
+id="prismWidth"
+placeholder="Width"
+>
+
+
+<input
+type="number"
+id="prismHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="rectangularPrismVolume()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="prismResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= CYLINDER ================= -->
+
+
+<div class="shape-box" id="cylinder">
+
+
+<h3>Cylinder</h3>
+
+
+<div class="formula">
+
+Formula: V = πr²h
+
+</div>
+
+
+
+<input
+type="number"
+id="cylinderRadius"
+placeholder="Radius"
+>
+
+
+<input
+type="number"
+id="cylinderHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="cylinderVolume()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="cylinderResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= CONE ================= -->
+
+
+<div class="shape-box" id="cone">
+
+
+<h3>Cone</h3>
+
+
+<div class="formula">
+
+Formula: V = ⅓πr²h
+
+</div>
+
+
+
+<input
+type="number"
+id="coneRadius"
+placeholder="Radius"
+>
+
+
+<input
+type="number"
+id="coneHeight"
+placeholder="Height"
+>
+
+
+
+<button onclick="coneVolume()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="coneResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= SPHERE ================= -->
+
+
+<div class="shape-box" id="sphere">
+
+
+<h3>Sphere</h3>
+
+
+<div class="formula">
+
+Formula: V = ⁴⁄₃πr³
+
+</div>
+
+
+
+<input
+type="number"
+id="sphereRadius"
+placeholder="Radius"
+>
+
+
+
+<button onclick="sphereVolume()">
+
+Calculate
+
+</button>
+
+
+
+<div class="result" id="sphereResult">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+<p>
+
+© 2026 Garrix | Interactive Mathematics Website
+
+</p>
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

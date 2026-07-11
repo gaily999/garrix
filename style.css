@@ -29,6 +29,31 @@
 }
 
 /* ==========================================================
+                        DARK MODE
+========================================================== */
+
+body.dark{
+
+    --dark:#F5F7F4;
+    --primary:#5DAE73;
+    --secondary:#84D39C;
+
+    --light:#1A1D1B;
+    --cream:#EAF5E8;
+
+    --white:#121412;
+
+    --nav-text:#EAF5E8;
+
+    --glass:rgba(25,28,26,.78);
+
+    --glass-border:rgba(255,255,255,.08);
+
+    --shadow:0 10px 35px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
                             RESET
 ========================================================== */
 *{
@@ -51,23 +76,26 @@ body{
     var(--dark);
     overflow-x:hidden;
     background:
-        radial-gradient(
-            circle at top right,
-            rgba(142,165,140,.35),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at bottom left,
-            rgba(115,138,110,.25),
-            transparent 45%
-        ),
-        linear-gradient(
-            180deg,
-            #E3ECE0,
-            #BFCFBB
-        );
+    radial-gradient(
+        circle at top right,
+        rgba(142,165,140,.25),
+        transparent 40%
+    ),
+    radial-gradient(
+        circle at bottom left,
+        rgba(115,138,110,.18),
+        transparent 45%
+    ),
+    linear-gradient(
+        180deg,
+        var(--cream),
+        var(--light)
+    );
+    transition:
+background .45s,
+color .45s;
         opacity:0;
-    animation:pageFade 1s ease forwards;
+    animation:pageFade 0.8s ease forwards;
 
 }
 @keyframes pageFade{
@@ -2555,4 +2583,298 @@ footer p{
         position:relative;
         top:0;
     }
+}
+/* ==========================
+      CLICKABLE FEATURE CARDS
+========================== */
+
+.feature-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.card-link{
+
+    margin-top:auto;
+
+    padding-top:20px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    transition:.3s ease;
+
+}
+
+.feature-card:hover .card-link{
+
+    letter-spacing:.5px;
+
+    transform:translateX(5px);
+
+}
+/* ==========================================================
+                        DARK MODE STYLES
+========================================================== */
+
+body.dark{
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(0,255,120,.08),
+        transparent 40%),
+
+        radial-gradient(circle at bottom left,
+        rgba(0,180,255,.06),
+        transparent 45%),
+
+        linear-gradient(
+            180deg,
+            #101513,
+            #1A201D
+        );
+
+}
+
+body.dark header{
+
+    background:
+        rgba(18,22,20,.72);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .hero{
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.60),
+            rgba(0,0,0,.55)
+        ),
+        url("img/banner.png");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+body.dark .card,
+body.dark .calculator,
+body.dark .shape-box,
+body.dark .about-card,
+body.dark .skills,
+body.dark .social-card{
+
+    background:rgba(20,24,22,.72);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:white;
+
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark label{
+
+    color:white;
+
+}
+
+body.dark input{
+
+    background:#232826;
+
+    color:white;
+
+}
+
+body.dark input::placeholder{
+
+    color:#AFC5B5;
+
+}
+
+body.dark .nav-links a{
+
+    color:#EAF5E8;
+
+}
+
+body.dark .nav-links a:hover,
+body.dark .nav-links a.active{
+
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+}
+.theme-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    padding:0;
+
+    margin:0;
+
+    font-size:18px;
+
+}
+
+/* BUTTONS */
+
+body.dark button,
+body.dark .btn{
+
+    background:linear-gradient(
+        135deg,
+        #1E6F4C,
+        #2F8F65
+    );
+
+    color:#fff;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.45);
+
+}
+
+body.dark button:hover,
+body.dark .btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        #289C68,
+        #42C987
+    );
+
+    transform:translateY(-4px);
+
+}
+/* ==========================================================
+                    DARK MODE SCROLLBAR
+========================================================== */
+
+body.dark::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+body.dark::-webkit-scrollbar-track{
+
+    background:#141816;
+
+}
+
+body.dark::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #3C8C5A,
+        #23543A
+    );
+
+    border-radius:20px;
+
+    border:3px solid #141816;
+
+}
+
+body.dark::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        180deg,
+        #53B97B,
+        #2D6F4A
+    );
+
+}
+/* ==========================================
+            ABOUT PAGE DARK MODE
+========================================== */
+
+body.dark .about-card,
+body.dark .skills,
+body.dark .social-card,
+body.dark .card,
+body.dark .shape-box{
+    background:rgba(24,28,26,.82);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+}
+body.dark .badge{
+
+    background:linear-gradient(
+        135deg,
+        #204030,
+        #2B6045
+    );
+
+}
+body.dark .social-links a{
+
+    background:#232826;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .social-links a:hover{
+
+    background:#2D6F4A;
+
+}
+body.dark .floating-profile{
+
+    background:linear-gradient(
+        135deg,
+        #25503A,
+        #2F8F65
+    );
+
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+
+}
+body.dark .about-content h2,
+body.dark .about-content h3,
+body.dark .profile-section h3,
+body.dark .skills h3{
+
+    color:white;
+
+}
+
+body.dark .about-content p{
+
+    color:#D7DDD8;
+
 }

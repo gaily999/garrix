@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrix | Formula Library</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/icon.png" alt="Garrix Logo">
+            <h1>Garrix</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li class="dropdown">
+                <a href="#">Geometry ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="area.html">Area</a></li>
+                    <li><a href="perimeter.html">Perimeter</a></li>
+                    <li><a href="volume.html">Volume</a></li>
+                    <li><a href="diameter.html">Diameter</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="converter.html">Unit Converter</a></li>
+                    <li><a href="formula.html" class="active">Formula Library</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page">
+    <h2>Formula Library</h2>
+    <p class="page-description">A collection of important mathematical formulas.</p>
+
+    <div class="formula-search">
+        <input type="text" id="formulaSearch" placeholder="Search formula...">
+    </div>
+
+    <h3 class="formula-category">Algebra</h3>
+    <div class="formula-grid">
+        <div class="formula-card">
+            <h3>Quadratic Formula</h3>
+            <div class="formula">x = (-b ± √(b² - 4ac)) / 2a</div>
+            <p>Used to solve quadratic equations.</p>
+        </div>
+        <div class="formula-card">
+            <h3>Slope Formula</h3>
+            <div class="formula">m = (y₂ - y₁) / (x₂ - x₁)</div>
+            <p>Finds the steepness of a line.</p>
+        </div>
+    </div>
+
+    <h3 class="formula-category">Geometry</h3>
+    <div class="formula-grid">
+        <div class="formula-card">
+            <h3>Rectangle Area</h3>
+            <div class="formula">A = L × W</div>
+            <p>Calculates the space inside a rectangle.</p>
+        </div>
+        <div class="formula-card">
+            <h3>Circle Area</h3>
+            <div class="formula">A = πr²</div>
+            <p>Finds the area of a circle.</p>
+        </div>
+        <div class="formula-card">
+            <h3>Sphere Volume</h3>
+            <div class="formula">V = ⁴⁄₃πr³</div>
+            <p>Calculates the volume of a sphere.</p>
+        </div>
+    </div>
+
+    <h3 class="formula-category">Trigonometry</h3>
+    <div class="formula-grid">
+        <div class="formula-card">
+            <h3>Sine Ratio</h3>
+            <div class="formula">sin θ = opposite / hypotenuse</div>
+            <p>Used for solving right triangles.</p>
+        </div>
+        <div class="formula-card">
+            <h3>Cosine Ratio</h3>
+            <div class="formula">cos θ = adjacent / hypotenuse</div>
+            <p>Relates sides of a triangle.</p>
+        </div>
+        <div class="formula-card">
+            <h3>Tangent Ratio</h3>
+            <div class="formula">tan θ = opposite / adjacent</div>
+            <p>Finds angles and missing sides.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Garrix | Interactive Mathematics Website</p>
+</footer>
+
+<div id="toast-container"></div>
+
+<button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,261 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Garrix | About</title>
-
     <link rel="icon" type="image/png" href="img/favicon.png">
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
-
 <body>
 
 <header>
-
     <nav class="navbar">
-
         <div class="logo">
-
             <img src="img/icon.png" alt="Garrix Logo">
-
             <h1>Garrix</h1>
-
         </div>
-
+        <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
         <ul class="nav-links">
-
-            <li><a href="index.html">Home</a></li>
-            <li><a href="calculator.html">Calculator</a></li>
-            <li><a href="diameter.html">Diameter</a></li>
-            <li><a href="area.html">Area</a></li>
-            <li><a href="volume.html">Volume</a></li>
-            <li><a href="perimeter.html">Perimeter</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-<li>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
-</li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="calculator.html"><i class="fa-solid fa-calculator"></i> Calculator</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-shapes"></i> Geometry ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="area.html">Area</a></li>
+                    <li><a href="perimeter.html">Perimeter</a></li>
+                    <li><a href="volume.html">Volume</a></li>
+                    <li><a href="diameter.html">Diameter</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-ellipsis"></i> More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="converter.html">Unit Converter</a></li>
+                    <li><a href="formula.html">Formula Library</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" class="active"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
         </ul>
-
     </nav>
-
 </header>
 
 <section class="page">
-
-
-<h2>About the Programmer</h2>
-
-
-<div class="about-layout">
-
-
-    <!-- LEFT SIDE -->
-
-    <div class="profile-section">
-
-
-        <div class="floating-profile">
-
-
-            <img src="img/ry.png"
-            alt="Programmer Picture"
-            class="profile">
-
-
+    <h2>About the Programmer</h2>
+    <div class="about-layout">
+        <div class="profile-section">
+            <div class="floating-profile">
+                <img src="img/ry.png" alt="Programmer Picture" class="profile">
+            </div>
+            <h3>Garry Abegail C. Abasolo</h3>
+            <div class="badge-container">
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">UI/UX Design</span>
+                <span class="badge">Git</span>
+                <span class="badge">GitHub</span>
+                <span class="badge">Problem Solving</span>
+            </div>
+            <div class="social-card">
+                <h3>Social Accounts</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sun.rryse/" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@abegrail" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@aira-pf1rr" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/abifrfr" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/sun.rryse/" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.roblox.com/users/2985180362/profile" title="Roblox"><i class="fa-solid fa-gamepad"></i></a>
+                </div>
+            </div>
         </div>
 
-
-
-        <h3>
-            Garry Abegail C. Abasolo
-        </h3>
-
-
-
-        <div class="badge-container">
-
-
-            <span class="badge">HTML5</span>
-
-            <span class="badge">CSS3</span>
-
-            <span class="badge">JavaScript</span>
-
-            <span class="badge">UI/UX Design</span>
-
-            <span class="badge">Git</span>
-
-            <span class="badge">GitHub</span>
-
-            <span class="badge">Problem Solving</span>
-
-
+        <div class="about-content">
+            <div class="card">
+                <h3>Student Information</h3>
+                <p><strong>Grade & Section:</strong> Grade 10 - Einstein</p>
+                <p><strong>School:</strong> Manolo Fortich National High School</p>
+            </div>
+            <div class="card">
+                <h3>Short Biography</h3>
+                <p>Hello! I'm <strong>Garry</strong>, a Grade 10 student from MFNHS. I'm super interested in web development and technology! Can you <strong>guess</strong> my favorite color? I think its blue. I really like designing, writing, coding, playing, and listening to music. But on top of that, I like socializing, because I'm super extroverted and loud. I bet you find me cool rn</p>
+            </div>
+            <div class="card">
+                <h3>Reflection</h3>
+                <p>Developing Garrix helped me improve my skills in HTML, CSS, JavaScript, design, and problem solving. This project taught me how to create complete interactive websites. It legit made test my patience, because this entire website took me around 10 hours even with AI... :vv</p>
+            </div>
         </div>
-
-       <!-- SOCIAL ACCOUNTS -->
-
-<div class="social-card">
-
-    <h3>Social Accounts</h3>
-
-
-    <div class="social-links">
-
-
-        <a href="https://www.facebook.com/sun.rryse/" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-
-        <a href="https://www.tiktok.com/@abegrail" title="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
-
-
-        <a href="https://www.youtube.com/@aira-pf1rr" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-
-
-        <a href="https://x.com/abifrfr" title="X / Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-
-        <a href="https://www.instagram.com/sun.rryse/" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-
-        <a href="https://www.roblox.com/users/2985180362/profile" title="Roblox">
-            <i class="fa-solid fa-gamepad"></i>
-        </a>
-
-
     </div>
-
-</div>
-
-    </div>
-
-
-
-
-
-    <!-- RIGHT SIDE -->
-
-    <div class="about-content">
-
-
-
-        <div class="card">
-
-
-            <h3>
-                Student Information
-            </h3>
-
-
-            <p>
-                <strong>Grade & Section:</strong>
-                Grade 10 - Einstein
-            </p>
-
-
-            <p>
-                <strong>School:</strong>
-                Manolo Fortich National High School
-            </p>
-
-
-        </div>
-
-
-
-
-
-        <div class="card">
-
-
-            <h3>
-                Short Biography
-            </h3>
-
-
-            <p>
-
-            Hello! I'm <strong>Garry</strong>, a Grade 10 student from MFNHS. I'm super
-            interested in web development and technology! Can you <strong>guess</strong> my favorite color? I think its blue. 
-            I really like designing, writing, coding, playing, and listening to music. But on top of that, I like socializing,
-            because I'm super extroverted and loud. I bet you find me cool rn
-            </p>
-
-
-        </div>
-
-
-
-
-
-        <div class="card">
-
-
-            <h3>
-                Reflection
-            </h3>
-
-
-            <p>
-
-            Developing Garrix helped me improve my skills
-            in HTML, CSS, JavaScript, design, and problem
-            solving. This project taught me how to create
-            complete interactive websites.
-
-            </p>
-
-
-        </div>
-
-
-
-    </div>
-
-
-
-</div>
-
-
-
 </section>
 
-<!-- ================= BACK TO TOP ================= -->
+<button id="backToTop" class="back-to-top">↑</button>
 
-<button id="backToTop" class="back-to-top">
-
-    ↑
-
-</button>
 <footer>
-
-    <p>
-
-        © 2026 Garrix | Interactive Mathematics Website
-
-    </p>
-
+    <p>© 2026 Garrix | Interactive Mathematics Website</p>
 </footer>
 
+<div id="toast-container"></div>
 <script src="script.js"></script>
 
 </body>
-
 </html>

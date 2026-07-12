@@ -1,142 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Garrix</title>
-
     <link rel="icon" type="image/png" href="img/favicon.png">
-
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header>
-
     <nav class="navbar">
-
         <div class="logo">
-
             <img src="img/icon.png" alt="Garrix Logo">
-
             <h1>Garrix</h1>
-
         </div>
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
         <ul class="nav-links">
-
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="calculator.html">Calculator</a></li>
-            <li><a href="diameter.html">Diameter</a></li>
-            <li><a href="area.html">Area</a></li>
-            <li><a href="volume.html">Volume</a></li>
-            <li><a href="perimeter.html">Perimeter</a></li>
-            <li><a href="about.html">About</a></li>
-
-            <li>
-                <button id="theme-toggle" class="theme-btn">🌙</button>
+            <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="calculator.html"><i class="fa-solid fa-calculator"></i> Calculator</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-shapes"></i> Geometry ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="area.html">Area</a></li>
+                    <li><a href="perimeter.html">Perimeter</a></li>
+                    <li><a href="volume.html">Volume</a></li>
+                    <li><a href="diameter.html">Diameter</a></li>
+                </ul>
             </li>
-
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-ellipsis"></i> More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="converter.html">Unit Converter</a></li>
+                    <li><a href="formula.html">Formula Library</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
         </ul>
-
     </nav>
-
 </header>
 
-<!-- ================= HERO ================= -->
-
 <section class="hero">
-
     <div class="hero-content">
-
         <h1>Mathematics Made Easy.</h1>
-
-        <p class="tagline">
-            Interactive calculators for students, teachers, and everyday problem solvers.
-        </p>
-
-        <a href="calculator.html" class="btn">
-            Start Solving →
-        </a>
-
-        <a href="#features" class="scroll-cue">
-            <span></span>
-        </a>
-
+        <p class="tagline">Interactive calculators for students, teachers, and everyday problem solvers.</p>
+        <a href="calculator.html" class="btn">Start Solving →</a>
+        <a href="#features" class="scroll-cue"><span></span></a>
     </div>
-
 </section>
-
-<!-- ================= EVERYTHING YOU NEED ================= -->
 
 <section class="features" id="features">
-
     <h2>Everything You Need</h2>
-
     <div class="cards">
-
         <a href="calculator.html" class="card feature-card">
-
             <h3>Scientific Calculator</h3>
-
-            <p>
-                Perform basic and advanced mathematical calculations with an easy-to-use scientific calculator.
-            </p>
-
-            <span class="card-link">
-                Open Calculator →
-            </span>
-
+            <p>Perform basic and advanced mathematical calculations with an easy-to-use scientific calculator.</p>
+            <span class="card-link">Open Calculator →</span>
         </a>
-
         <a href="area.html" class="card feature-card">
-
             <h3>Geometry Calculators</h3>
-
-            <p>
-                Calculate area, perimeter, diameter, and volume using dedicated geometry tools.
-            </p>
-
-            <span class="card-link">
-                Explore Geometry →
-            </span>
-
+            <p>Calculate area, perimeter, diameter, and volume using dedicated geometry tools.</p>
+            <span class="card-link">Explore Geometry →</span>
         </a>
-
         <a href="about.html" class="card feature-card">
-
             <h3>About Garrix</h3>
-
-            <p>
-                Learn more about Garrix, its features, and the developer behind the project.
-            </p>
-            <span class="card-link">
-                Learn More →
-            </span>
+            <p>Learn more about Garrix, its features, and the developer behind the project.</p>
+            <span class="card-link">Learn More →</span>
         </a>
     </div>
 </section>
-<!-- ================= BACK TO TOP ================= -->
 
-<button id="backToTop" class="back-to-top">
+<button id="backToTop" class="back-to-top">↑</button>
 
-    ↑
-
-</button>
-
-<!-- ================= FOOTER ================= -->
 <footer>
-    <p>
-        © 2026 Garrix | Interactive Mathematics Website
-    </p>
+    <p>© 2026 Garrix | Interactive Mathematics Website</p>
 </footer>
+
+<div id="toast-container"></div>
 <script src="script.js"></script>
+
 </body>
 </html>

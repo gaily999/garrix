@@ -1,73 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Garrix | Calculator</title>
-
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header>
-
     <nav class="navbar">
-
         <div class="logo">
-
             <img src="img/icon.png" alt="Garrix Logo">
-
             <h1>Garrix</h1>
-
         </div>
-
+        <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
         <ul class="nav-links">
-
-            <li><a href="index.html">Home</a></li>
-            <li><a href="calculator.html" class="active">Calculator</a></li>
-            <li><a href="diameter.html">Diameter</a></li>
-            <li><a href="area.html">Area</a></li>
-            <li><a href="volume.html">Volume</a></li>
-            <li><a href="perimeter.html">Perimeter</a></li>
-            <li><a href="about.html">About</a></li>
-<li>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
-</li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="calculator.html" class="active"><i class="fa-solid fa-calculator"></i> Calculator</a></li>
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-shapes"></i> Geometry ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="area.html">Area</a></li>
+                    <li><a href="perimeter.html">Perimeter</a></li>
+                    <li><a href="volume.html">Volume</a></li>
+                    <li><a href="diameter.html">Diameter</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#"><i class="fa-solid fa-ellipsis"></i> More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="converter.html">Unit Converter</a></li>
+                    <li><a href="formula.html">Formula Library</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
         </ul>
-
     </nav>
-
 </header>
 
-<!-- ================= PAGE ================= -->
-
 <section class="page">
-
     <h2>Scientific Calculator</h2>
-
-    <p style="text-align:center; margin-bottom:35px;">
-        Solve mathematical expressions quickly and accurately.
-    </p>
+    <p class="page-description">Solve mathematical expressions quickly and accurately.</p>
 
     <div class="calculator">
-
-        <input
-            type="text"
-            id="display"
-            placeholder="0"
-            readonly
-        >
-
+        <input type="text" id="display" placeholder="0" readonly>
         <div class="calculator-buttons">
-
             <button onclick="clearDisplay()">AC</button>
             <button onclick="deleteLast()">⌫</button>
             <button onclick="appendValue('%')">%</button>
@@ -102,25 +83,27 @@
             <button onclick="appendValue('Math.PI')">π</button>
             <button onclick="appendValue('(')">(</button>
             <button onclick="appendValue(')')">)</button>
-
         </div>
-
     </div>
 
+    <button id="copyBtn" class="copy-btn" onclick="copyAnswer()">Copy</button>
+
+    <div class="history-panel">
+        <div class="history-header">
+            <h3>Calculation History</h3>
+            <button onclick="clearHistory()">Clear</button>
+        </div>
+        <div id="historyList" class="history-list">
+            <p class="empty-history">No calculations yet.</p>
+        </div>
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
-    <p>
-
-        © 2026 Garrix | Interactive Mathematics Website
-
-    </p>
-
+    <p>© 2026 Garrix | Interactive Mathematics Website</p>
 </footer>
 
+<div id="toast-container"></div>
 <script src="script.js"></script>
 
 </body>
